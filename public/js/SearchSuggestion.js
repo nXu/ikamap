@@ -13,33 +13,27 @@ var searchSuggestion = {
 	 * @return {void}
 	 */
 	init: 			function(selector, url, field, formSelector, detailsUri) {
-						// Save details uri
-						this.detailsUri = detailsUri;
-
 						// Initialize Bootstrap Ajax Typeahead
 						$(selector).typeahead({
 							ajax 			: {
-								url				: uri,
+								url				: url,
 								triggerLength	: 3,
 								method			: 'get',
 								displayField	: field,
 								valueField		: field
 							},
-							onSelect		: handleSelect
+							onSelect		: function(item) {
+								window.location.href = detailsUri + item.value;
+							}
 						});
-					}, 
 
-	/**
-	 * Handles the onSelect event of the suggested search items.
-	 * @param  {object} item The clicked object.
-	 * @return {void}
-	 */
-	handleSelect: 	function(item) {
-		this.showItem(item.value);
-	},
-
-	showItem: 		function(item) {
-		window.location.href = detailsUri + item;
-	}
+						// Initialize form submit event
+						$(formSelector).submit(function(e) {
+							e.preventDefault();
+							if ($(selector).val().length >= 3) {
+								window.location.href = detailsUri + $(selector).val();
+							}
+						})
+					}
 };
 

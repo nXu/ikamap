@@ -10,7 +10,7 @@
 		{{ $name->name }}; 
 	@endforeach
 	</p>
-	<p><strong>{{ Lang::get('player.current_ally') }}:</strong> {{ $player->ally_tag }}</p>
+	<p><strong>{{ Lang::get('player.current_ally') }}:</strong> <a href="/ally/{{ $player->ally_tag }}">{{ $player->ally_tag }}</a></p>
 	<p><strong>{{ Lang::get('player.ally_history') }}:</strong> 
 	@foreach($allies as $ally) 
 		{{ $ally->ally_tag }}; 
@@ -70,7 +70,9 @@
 					@endif
 				</td>
 				<td>
-					<a href="http://s14-us.ikariam.gameforge.com/index.php?view=island&islandId={{ $city->island->id }}&selectCity={{ $city->id }}" target="_blank">{{ Lang::get('player.open') }}</a>
+					<a class="btn btn-primary" href="http://s14-us.ikariam.gameforge.com/index.php?view=island&islandId={{ $city->island->id }}&selectCity={{ $city->id }}" target="_blank">
+						<i class="fa fa-fw fa-external-link"></i> {{ Lang::get('player.open') }}
+					</a>
 				</td>
 			</tr>
 		@endforeach

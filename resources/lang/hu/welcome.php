@@ -6,5 +6,6 @@ return [
     				minimalista ika-world klón egy apró extrával: a játékosok kalózerődje is látszik.',
    	'limit'		=> 'A szerver korlátozott erőforrásai miatt csak az US Xi szerver támogatott.',
     'start'		=> 'Láss hozzá, próbáld ki a gyorskeresést!',
-    'update'	=> 'Az utolsó frissítés dátuma'
+    'update'	=> 'Az utolsó frissítés dátuma',
+    '404'		=> 'Az oldal nem található'
 ];

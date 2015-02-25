@@ -16,5 +16,4 @@ class HomeController extends Controller {
 
         return view('home.home', array('update' => $lastUpdate[0]->max));
     }
-
 }

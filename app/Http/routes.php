@@ -11,10 +11,14 @@
 |
 */
 
+// Home and general
 Route::get('/', 'HomeController@getIndex');
 
-Route::get('language/{language}', 'LanguageController@getSetLanguage');
-
+// Player search
 Route::controller('players', 'PlayerController');
 Route::get('player/{player}', 'PlayerController@getShow');
+
+// Ally search
+Route::controller('allies', 'AllyController');
+Route::get('ally/{ally}', 'AllyController@getShow');
 

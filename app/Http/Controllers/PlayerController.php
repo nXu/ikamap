@@ -13,7 +13,7 @@ class PlayerController extends Controller {
 	 * @return Response The response view.
 	 */
 	public function getIndex() {
-		return Response::view('player.search');
+		return Response::view('general.search', ['singular' => 'player', 'plural' => 'players']);
 	}
 
 	/**
@@ -42,7 +42,7 @@ class PlayerController extends Controller {
 		// Check if the player exists
 		if (is_null($player)) {
 			// No such player
-			// TODO : display error message when no userhas been found
+			abort(404);
 			return;
 		}
 

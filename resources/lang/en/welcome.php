@@ -7,5 +7,6 @@ return [
     				of the pirate fortresses.',
     'limit'		=> 'Due to my limited server resources, only the server Xi on US is supported.',
     'start'		=> 'Get started by making a quick search!',
-    'update'	=> 'Last updated at'
+    'update'	=> 'Last updated at',
+    '404'		=> 'Page not found'
 ];

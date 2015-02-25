@@ -15,6 +15,6 @@ return [
     'link'			=> 'Link',
     'open'			=> 'Megnyitás Ikariamban',
 
-    'player_name'   => 'Játékos neve',
-    'player_search' => 'Játékos keresése',
+    'name'          => 'Játékos neve',
+    'search'        => 'Játékos keresése',
 ];

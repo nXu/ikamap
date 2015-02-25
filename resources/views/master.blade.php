@@ -49,13 +49,13 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#"><i class="fa fa-fw fa-compass"></i> IkaMapper</a>
+	          <a class="navbar-brand" href="/"><i class="fa fa-fw fa-compass"></i> IkaMapper</a>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
 	            <li><a href="/players/">{{ Lang::get('menu.player') }}</a></li>
-	            <li><a href="/ally/">{{ Lang::get('menu.alliance') }}</a></li>
-	            <li><a href="/island/">{{ Lang::get('menu.island') }}</a></li>
+	            <li><a href="/allies/">{{ Lang::get('menu.alliance') }}</a></li>
+	            <li><a href="/islands/">{{ Lang::get('menu.island') }}</a></li>
 	            
 	          </ul>
 	          <form class="navbar-form navbar-right" role="search" id="quicksearch-form">
@@ -69,7 +69,7 @@
 		              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Lang::get('menu.language') }} <span class="caret"></span></a>
 		              <ul class="dropdown-menu" role="menu">
 		              	@foreach ($languages as $code => $name)
-		              		<li><a href="{{ URL::to('/language/' . $code) }}">{{ $name }}</a></li>
+		              		<li><a href="?language={{ $code }}">{{ $name }}</a></li>
 		              	@endforeach
 		              </ul>
 		            </li>

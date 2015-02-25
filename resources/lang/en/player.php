@@ -15,6 +15,6 @@ return [
     'link'			=> 'Link',
     'open'			=> 'View in Ikariam',
 
-    'player_name'   => 'Player name',
-    'player_search' => 'Search player'
+    'name'          => 'Player name',
+    'search'        => 'Search player'
 ];
